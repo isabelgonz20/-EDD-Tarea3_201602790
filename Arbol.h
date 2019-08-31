@@ -10,14 +10,21 @@
 #include "Nodo.h"
 
 class Arbol {
-private
+private:
 	Nodo* raiz;
-
 
 public:
 	void recorrer(Nodo* nodo);
-	Arbol();
+	Arbol(Nodo* raiz);
 	virtual ~Arbol();
+
+	const Nodo*& getRaiz() const {
+		return raiz;
+	}
+
+	void setRaiz(const Nodo *&raiz) {
+		this->raiz = raiz;
+	}
 };
 
 #endif /* ARBOL_H_ */
